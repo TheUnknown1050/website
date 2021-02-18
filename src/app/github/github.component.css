@@ -1,0 +1,12 @@
+.jumbotron {
+    text-align: center;
+    background: none;
+    margin-top: 30vh;
+}
+
+.entity-heading {
+    margin: 0 0 25px;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;  
+}

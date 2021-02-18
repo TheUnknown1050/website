@@ -1,0 +1,34 @@
+.jumbotron {
+    background: none;
+    text-align: center;
+    margin-top: 25vh;
+    margin-bottom: 150px;
+}
+
+.entity-heading {
+    margin: 0 0 15px;
+}
+
+.project-section {
+    margin: 35px;
+}
+
+.project-card {
+    display: inline-block;
+    margin: 25px;
+    max-height: 15rem;
+}
+
+.mat-card-avatar img {
+    background-size: cover;
+    height: 50px;
+}
+
+.acronym {
+    font-size: 35px;
+}
+
+.project-button {
+    padding: 10px;
+    border-radius: 50%;
+}
