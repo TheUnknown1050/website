@@ -6,13 +6,15 @@ html, body {
     overflow-x: hidden;
 }
 body { 
-    margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; 
+    margin: 0; 
+    font-family: Roboto, "Helvetica Neue", sans-serif;
+    color: var(--font); 
 }
 
 /* scrollbar */
 ::-webkit-scrollbar-track
 {
-    background-color: lightgray;
+    background-color: var(--background-tertiary);
 }
 ::-webkit-scrollbar
 {
@@ -25,8 +27,8 @@ body {
     background-image: -webkit-gradient(linear,
         left bottom,
         left top,
-        color-stop(0.72, #03a9f4),
-        color-stop(0.86, #2196f3));
+        color-stop(0.72, var(--primary)),
+        color-stop(0.86, var(--secondary)));
 }
 
 footer {
@@ -41,12 +43,12 @@ footer p {
 }
 
 a.hoverable-link {
-    color: #03a9f4;
+    color: var(--primary);
     text-decoration: none;
 }
 
 a.hoverable-link:hover {
-    color: #2196f3;
+    color: var(--secondary);
 }
 
 .centered {

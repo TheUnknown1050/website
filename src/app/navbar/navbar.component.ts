@@ -1,4 +1,7 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, ViewChild } from '@angular/core';
+import { ThemeService } from '../services/theme.service';
+import { FormGroup, FormControl } from '@angular/forms';
+import { MatSelect } from '@angular/material/select';
 
 @Component({
   selector: 'navbar',
@@ -7,9 +10,20 @@ import { Component, OnInit } from '@angular/core';
 })
 export class NavbarComponent implements OnInit {
 
-  constructor() { }
+  @ViewChild('themeSelect') themeSelect: MatSelect;
 
-  ngOnInit(): void {
+  defaultTheme = 'IONIC';
+
+  form = new FormGroup({
+    theme: new FormControl(localStorage.getItem('theme') || this.defaultTheme)
+  });
+
+  constructor(private service: ThemeService) {
   }
-
+  ngOnInit() {
+    this.service.updateTheme();
+    this.form.valueChanges.subscribe(() => 
+      this.service.changeTheme(
+        this.form.get('theme').value));
+  }
 }

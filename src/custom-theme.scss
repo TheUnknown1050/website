@@ -1,28 +1,107 @@
-@import '~@angular/material/theming';
-// Plus imports for other components in your app.
+@import "~@angular/material/theming";
 
-// Include the common styles for Angular Material. We include this here so that you only
-// have to load a single css file for Angular Material in your app.
-// Be sure that you only ever include this mixin once!
 @include mat-core();
 
-// Define the palettes for your theme using the Material Design palettes available in palette.scss
-// (imported above). For each palette, you can optionally specify a default, lighter, and darker
-// hue. Available color palettes: https://material.io/design/color/
-$candy-app-primary: mat-palette($mat-light-blue);
-$candy-app-accent:  mat-palette($mat-blue);
+body {    
+  background: black;
+  background: var(--background-primary);
+}
 
+:root, :root[theme=DARK] {
+    --heading: #FFFFFF;
+    --font: #F4F2F3;
 
-// Create the theme object. A theme consists of configurations for individual
-// theming systems such as `color` or `typography`.
-$candy-app-theme: mat-light-theme((
-  color: (
-    primary: $candy-app-primary,
-    accent: $candy-app-accent,
-  )
-));
+    --primary: #46828D;
+    --secondary: #276C8A;
+    --tertiary: #36E2CA;
 
-// Include theme styles for core and each component used in your app.
-// Alternatively, you can import and @include the theme mixins for each component
-// that you are using.
-@include angular-material-theme($candy-app-theme);
+    --background-primary: #36393F;
+    --background-secondary: #2F3136;
+    --background-tertiary: #202225;
+}
+:root[theme=LIGHT] {
+    --heading: #000;
+    --font: #000;
+    
+    --primary: #46828D;
+    --secondary: #276C8A;
+    --tertiary: #36E2CA;
+
+    --background-primary: #fff;
+    --background-secondary: #e0dbdb;
+    --background-tertiary: #d6d6d6;
+}
+
+$primary-palette: (
+    50 : #e9f0f1,
+    100 : #c7d9dd,
+    200 : #a2c0c6,
+    300 : #7da7af,
+    400 : #61949d,
+    500 : #45818c,
+    600 : #3e7984,
+    700 : #366e79,
+    800 : #2e646f,
+    900 : #1f515c,
+    A100 : #9cecff,
+    A200 : #69e3ff,
+    A400 : #36d9ff,
+    A700 : #1dd4ff,
+    contrast: (
+        50 : #000000,
+        100 : #000000,
+        200 : #000000,
+        300 : #000000,
+        400 : #000000,
+        500 : #ffffff,
+        600 : #ffffff,
+        700 : #ffffff,
+        800 : #ffffff,
+        900 : #ffffff,
+        A100 : #000000,
+        A200 : #000000,
+        A400 : #000000,
+        A700 : #000000,
+    )
+);
+
+$secondary-palette: (
+    50 : #e5edf1,
+    100 : #bed3dc,
+    200 : #93b6c5,
+    300 : #6898ad,
+    400 : #47829c,
+    500 : #276c8a,
+    600 : #236482,
+    700 : #1d5977,
+    800 : #174f6d,
+    900 : #0e3d5a,
+    A100 : #90d0ff,
+    A200 : #5dbbff,
+    A400 : #2aa5ff,
+    A700 : #109bff,
+    contrast: (
+        50 : #000000,
+        100 : #000000,
+        200 : #000000,
+        300 : #000000,
+        400 : #ffffff,
+        500 : #ffffff,
+        600 : #ffffff,
+        700 : #ffffff,
+        800 : #ffffff,
+        900 : #ffffff,
+        A100 : #000000,
+        A200 : #000000,
+        A400 : #000000,
+        A700 : #ffffff,
+    )
+);
+
+$primary: mat-palette($primary-palette);
+$secondary: mat-palette($secondary-palette);
+$warn: mat-palette($mat-yellow);
+
+$theme: mat-dark-theme($primary, $secondary, $warn);
+
+@include angular-material-theme($theme);

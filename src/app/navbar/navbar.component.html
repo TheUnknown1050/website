@@ -1,23 +1,52 @@
 <div>
-    <mat-toolbar color="primary">
-      <img src="../../assets/images/Aktindo+Logo.png" alt="Aktindo Logo" height="35px">  
+    <mat-toolbar color="primary" class="navbar" id="navbar">
+      <img src="../../assets/images/Aktindo+Logo.png" alt="Aktindo Logo" height="45px" class="navbar-logo">  
       <span class="navbar-title">Aktindo</span>
       <span class="spacer"></span>
       <a mat-icon-button class="icon home-icon fa-sm" aria-label="Home Icon" routerLink="/" matTooltip="Home">
         <i class="fas fa-home"></i>
       </a>
-      <a mat-icon-button class="icon about-icon fa-sm" aria-label="About Icon" routerLink="/about">
+      <a mat-icon-button class="icon about-icon fa-sm" aria-label="About Icon" routerLink="/about" matTooltip="About">
         <i class="fas fa-info"></i>
       </a>
-      <a mat-icon-button class="icon microscope-icon fa-sm" aria-label="Microsope Icon" routerLink="/projects">
+      <a mat-icon-button class="icon microscope-icon fa-sm" aria-label="Microsope Icon" routerLink="/projects" matTooltip="Projects">
         <i class="fas fa-microscope"></i>
       </a>
-      <a mat-icon-button class="icon github-icon fa-sm" aria-label="GitHub Icon" routerLink="/github">
+      <a mat-icon-button class="icon github-icon fa-sm" aria-label="GitHub Icon" routerLink="/github" matTooltip="GitHub">
         <i class="fab fa-github"></i>
       </a>
-      <a mat-icon-button class="icon discord-icon fa-sm" aria-label="Discord Icon" routerLink="/discord">
+      <a mat-icon-button class="icon discord-icon fa-sm" aria-label="Discord Icon" routerLink="/discord" matTooltip="Discord">
         <i class="fab fa-discord"></i>
       </a>
+
       <span class="div-spacer"></span>
+
+      <!-- <form #f="ngForm" [formGroup]="form">
+        <mat-form-field appearance="outline" class="theme-selector">
+            <button mat-icon-button matTooltip="Theme" (click)=themeSelect.open()></button>
+            <mat-label>
+              <i class="fas fa-paint-brush"></i> Theme
+            </mat-label>
+            <mat-select formControlName="theme" #themeSelect>
+                <mat-option value="DARK" selected>Dark</mat-option>
+                <mat-option value="LIGHT">Light</mat-option>
+            </mat-select>
+        </mat-form-field>
+      </form> -->
+      <form #f="ngForm" [formGroup]="form">
+        <button mat-fab color="primary" matTooltip="Theme" (click)=select.open()>
+
+          <i class="fas fa-paint-brush fa-lg"></i>
+
+          <mat-select
+            #select
+            formControlName="theme"
+            class="themeSelector">
+            <mat-option value="DARK" selected>Dark</mat-option>
+            <mat-option value="LIGHT">Light</mat-option>
+          </mat-select>
+
+        </button>
+      </form>
     </mat-toolbar>
 </div>

@@ -44,7 +44,7 @@ import {MatCardModule} from '@angular/material/card';
     MatToolbarModule,
     MatProgressSpinnerModule,
     MatGridListModule,
-    MatCardModule
+    MatCardModule,
   ]
 })
 export class MaterialModule {}

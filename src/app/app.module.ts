@@ -4,6 +4,7 @@ import { BrowserModule } from '@angular/platform-browser';
 import { AppComponent } from './app.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { AppRoutingModule } from './app-routing.module';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 
 // Pages
 import { AboutComponent } from './about/about.component';
@@ -18,6 +19,9 @@ import { NavbarComponent } from './navbar/navbar.component';
 import { ProjectsComponent } from './projects/projects.component';
 import { GithubComponent } from './github/github.component';
 import { DiscordComponent } from './discord/discord.component';
+
+// Project Service
+import { ProjectsService } from './services/projects.service';
 
 @NgModule({
   declarations: [
@@ -35,9 +39,12 @@ import { DiscordComponent } from './discord/discord.component';
     BrowserModule,
     BrowserAnimationsModule,
     AppRoutingModule,
-    MaterialModule
+    MaterialModule,
+    FormsModule,
+    ReactiveFormsModule
   ],
   providers: [
+    ProjectsService,
   ],
   bootstrap: [AppComponent],
   schemas: [CUSTOM_ELEMENTS_SCHEMA]

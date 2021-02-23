@@ -1,5 +1,4 @@
 <navbar></navbar>
-
 <div class="jumbotron">
     <h1 class="mat-display-3 entity-heading">Projects</h1>
     <h2 class="mat-h2">Here is a list of all my projects with a brief description and usage.</h2>
@@ -22,10 +21,10 @@
           </p>
         </mat-card-content>
         <mat-card-actions>
-            <a mat-button [href]="project.githubUrl" target="_blank" class="project-button">
+            <a mat-icon-button [href]="project.githubUrl" target="_blank" class="project-button">
                 <i class="fab fa-github fa-2x"></i>
             </a>
-            <a *ngIf='project.websiteUrl' mat-button [href]="project.websiteUrl" target="_blank" class="project-button">
+            <a *ngIf='project.websiteUrl' mat-icon-button [href]="project.websiteUrl" target="_blank" class="project-button">
                 <i class="fas fa-external-link-alt fa-2x"></i>
             </a>
         </mat-card-actions>
