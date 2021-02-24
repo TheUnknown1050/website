@@ -10,10 +10,10 @@ export class GithubComponent implements OnInit {
   constructor() {
    }
 
+  githubLink = 'https://github.com/Aktindo' 
+
   ngOnInit(): void {
-      setTimeout(() => {
-      window.location.href = 'https://github.com/Aktindo'
-    }, 5 * 1000);
+    window.location.href = this.githubLink
   }
 
 }

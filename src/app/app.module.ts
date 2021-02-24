@@ -22,6 +22,7 @@ import { DiscordComponent } from './discord/discord.component';
 
 // Project Service
 import { ProjectsService } from './services/projects.service';
+import { DocsComponent } from './docs/docs.component';
 
 @NgModule({
   declarations: [
@@ -34,6 +35,7 @@ import { ProjectsService } from './services/projects.service';
     ProjectsComponent,
     GithubComponent,
     DiscordComponent,
+    DocsComponent,
   ],
   imports: [
     BrowserModule,

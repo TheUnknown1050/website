@@ -9,6 +9,7 @@ import { Project, ProjectsService } from '../services/projects.service';
 export class ProjectsComponent implements OnInit {
 
   projects;
+  docs = 'https://aktindo.thedev.id/docs'
 
   constructor(service: ProjectsService) { 
     document.title = 'Aktindo | Projects'

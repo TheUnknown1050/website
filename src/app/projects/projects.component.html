@@ -1,7 +1,8 @@
 <navbar></navbar>
 <div class="jumbotron">
-    <h1 class="mat-display-3 entity-heading">Projects</h1>
-    <h2 class="mat-h2">Here is a list of all my projects with a brief description and usage.</h2>
+    <h1 class="mat-display-3 entity-heading"><i class="fas fa-rocket"></i> Projects</h1>
+    <p class="mat-h2">Here is a list of all my projects with a brief description and usage.</p>
+    <p class="mat-h3" *ngIf="docs"><i class="fas fa-book-open"></i> You can view their documentation <a [href]=docs class="hoverable-link">here</a>!</p>
 </div>
 <div class="project-section" id="project-section">
     <mat-card class="project-card" *ngFor="let project of projects">

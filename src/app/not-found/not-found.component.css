@@ -6,5 +6,5 @@
 
 .entity-heading {
     margin: 0 0 15px;
-    color: #03a9f4;
+    color: var(--primary);
 }

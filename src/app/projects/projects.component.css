@@ -10,13 +10,26 @@
 }
 
 .project-section {
-    margin: 35px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+@media screen and (max-width: 600px) {
+    .project-section {
+        display: inline-block;
+    }
 }
 
 .project-card {
-    display: inline-block;
-    margin: 25px;
-    max-height: 15rem;
+    margin: 15px;
+    background-color: var(--background-secondary);
+    color: var(--font);
+    box-shadow: none;
+}
+
+mat-card-subtitle {
+    color: var(--font);
 }
 
 .mat-card-avatar img {

@@ -9,10 +9,10 @@ export class DiscordComponent implements OnInit {
 
   constructor() { }
 
+  discordLink = 'https://discord.gg/6g297Usrsn'
+
   ngOnInit(): void {
-    setTimeout(() => {
-      window.location.href = 'https://discord.gg/6g297Usrsn'
-    }, 5 * 1000);
+    window.location.href = this.discordLink
   }
 
 }
